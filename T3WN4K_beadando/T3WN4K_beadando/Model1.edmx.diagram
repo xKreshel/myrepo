@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1a943be340694beab23fd0795aee7c65" Name="Diagram1">
+        <EntityTypeShape EntityType="Database1Model.Award" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Director" Width="1.5" PointX="10" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Genre" Width="1.5" PointX="3.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Movie" Width="1.5" PointX="5.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Movies_Director" Width="1.5" PointX="7.625" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Rating" Width="1.5" PointX="5" PointY="3.5" IsExpanded="true" />
+        <AssociationConnector Association="Database1Model.FK_Award_ToDirector" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK_Director_toDirectors" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK_Genre_ToMovie" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK_Movie_toMovies" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK_Rating_ToMovie" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

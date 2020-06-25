@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+    <EntitySetMapping Name="Awards">
+      <EntityTypeMapping TypeName="Database1Model.Award">
+        <MappingFragment StoreEntitySet="Award">
+          <ScalarProperty Name="dir_id" ColumnName="dir_id" />
+          <ScalarProperty Name="num_o_awards" ColumnName="num_o_awards" />
+          <ScalarProperty Name="main_award" ColumnName="main_award" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Directors">
+      <EntityTypeMapping TypeName="Database1Model.Director">
+        <MappingFragment StoreEntitySet="Director">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="dir_fname" ColumnName="dir_fname" />
+          <ScalarProperty Name="dir_lname" ColumnName="dir_lname" />
+          <ScalarProperty Name="dir_gender" ColumnName="dir_gender" />
+          <ScalarProperty Name="dir_born" ColumnName="dir_born" />
+          <ScalarProperty Name="dir_born_place" ColumnName="dir_born_place" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genres">
+      <EntityTypeMapping TypeName="Database1Model.Genre">
+        <MappingFragment StoreEntitySet="Genre">
+          <ScalarProperty Name="mov_id" ColumnName="mov_id" />
+          <ScalarProperty Name="gen_title" ColumnName="gen_title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movies">
+      <EntityTypeMapping TypeName="Database1Model.Movie">
+        <MappingFragment StoreEntitySet="Movie">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="mov_title" ColumnName="mov_title" />
+          <ScalarProperty Name="mov_release" ColumnName="mov_release" />
+          <ScalarProperty Name="mov_rel_country" ColumnName="mov_rel_country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movies_Director">
+      <EntityTypeMapping TypeName="Database1Model.Movies_Director">
+        <MappingFragment StoreEntitySet="Movies_Director">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MovieFK" ColumnName="MovieFK" />
+          <ScalarProperty Name="DirectorFK" ColumnName="DirectorFK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ratings">
+      <EntityTypeMapping TypeName="Database1Model.Rating">
+        <MappingFragment StoreEntitySet="Rating">
+          <ScalarProperty Name="mov_id" ColumnName="mov_id" />
+          <ScalarProperty Name="rev_stars" ColumnName="rev_stars" />
+          <ScalarProperty Name="number_o_ratings" ColumnName="number_o_ratings" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

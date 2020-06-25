@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Award">
+    <Key>
+      <PropertyRef Name="dir_id" />
+    </Key>
+    <Property Name="dir_id" Type="int" Nullable="false" />
+    <Property Name="num_o_awards" Type="int" />
+    <Property Name="main_award" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Director">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dir_fname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="dir_lname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="dir_gender" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="dir_born" Type="date" />
+    <Property Name="dir_born_place" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Genre">
+    <Key>
+      <PropertyRef Name="mov_id" />
+    </Key>
+    <Property Name="mov_id" Type="int" Nullable="false" />
+    <Property Name="gen_title" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Movie">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mov_title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="mov_release" Type="date" />
+    <Property Name="mov_rel_country" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Movies_Director">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MovieFK" Type="int" Nullable="false" />
+    <Property Name="DirectorFK" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Rating">
+    <Key>
+      <PropertyRef Name="mov_id" />
+    </Key>
+    <Property Name="mov_id" Type="int" Nullable="false" />
+    <Property Name="rev_stars" Type="float" Nullable="false" />
+    <Property Name="number_o_ratings" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Award_ToDirector">
+    <End Role="Director" Type="Self.Director" Multiplicity="1" />
+    <End Role="Award" Type="Self.Award" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Director">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Award">
+        <PropertyRef Name="dir_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Director_toDirectors">
+    <End Role="Director" Type="Self.Director" Multiplicity="1" />
+    <End Role="Movies_Director" Type="Self.Movies_Director" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Director">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Movies_Director">
+        <PropertyRef Name="DirectorFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Genre_ToMovie">
+    <End Role="Movie" Type="Self.Movie" Multiplicity="1" />
+    <End Role="Genre" Type="Self.Genre" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Movie">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Genre">
+        <PropertyRef Name="mov_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Movie_toMovies">
+    <End Role="Movie" Type="Self.Movie" Multiplicity="1" />
+    <End Role="Movies_Director" Type="Self.Movies_Director" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Movie">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Movies_Director">
+        <PropertyRef Name="MovieFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rating_ToMovie">
+    <End Role="Movie" Type="Self.Movie" Multiplicity="1" />
+    <End Role="Rating" Type="Self.Rating" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Movie">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Rating">
+        <PropertyRef Name="mov_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Database1ModelStoreContainer">
+    <EntitySet Name="Award" EntityType="Self.Award" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Director" EntityType="Self.Director" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Genre" EntityType="Self.Genre" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Movie" EntityType="Self.Movie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Movies_Director" EntityType="Self.Movies_Director" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rating" EntityType="Self.Rating" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Award_ToDirector" Association="Self.FK_Award_ToDirector">
+      <End Role="Director" EntitySet="Director" />
+      <End Role="Award" EntitySet="Award" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Director_toDirectors" Association="Self.FK_Director_toDirectors">
+      <End Role="Director" EntitySet="Director" />
+      <End Role="Movies_Director" EntitySet="Movies_Director" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Genre_ToMovie" Association="Self.FK_Genre_ToMovie">
+      <End Role="Movie" EntitySet="Movie" />
+      <End Role="Genre" EntitySet="Genre" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Movie_toMovies" Association="Self.FK_Movie_toMovies">
+      <End Role="Movie" EntitySet="Movie" />
+      <End Role="Movies_Director" EntitySet="Movies_Director" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rating_ToMovie" Association="Self.FK_Rating_ToMovie">
+      <End Role="Movie" EntitySet="Movie" />
+      <End Role="Rating" EntitySet="Rating" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
