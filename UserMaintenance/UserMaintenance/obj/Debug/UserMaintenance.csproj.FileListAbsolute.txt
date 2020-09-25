@@ -1,0 +1,11 @@
+E:\GitVisualStudio\UserMaintenance\UserMaintenance\bin\Debug\UserMaintenance.exe.config
+E:\GitVisualStudio\UserMaintenance\UserMaintenance\bin\Debug\UserMaintenance.exe
+E:\GitVisualStudio\UserMaintenance\UserMaintenance\bin\Debug\UserMaintenance.pdb
+E:\GitVisualStudio\UserMaintenance\UserMaintenance\obj\Debug\UserMaintenance.csprojAssemblyReference.cache
+E:\GitVisualStudio\UserMaintenance\UserMaintenance\obj\Debug\UserMaintenance.Form1.resources
+E:\GitVisualStudio\UserMaintenance\UserMaintenance\obj\Debug\UserMaintenance.Properties.Resources.resources
+E:\GitVisualStudio\UserMaintenance\UserMaintenance\obj\Debug\UserMaintenance.Resource1.resources
+E:\GitVisualStudio\UserMaintenance\UserMaintenance\obj\Debug\UserMaintenance.csproj.GenerateResource.cache
+E:\GitVisualStudio\UserMaintenance\UserMaintenance\obj\Debug\UserMaintenance.csproj.CoreCompileInputs.cache
+E:\GitVisualStudio\UserMaintenance\UserMaintenance\obj\Debug\UserMaintenance.exe
+E:\GitVisualStudio\UserMaintenance\UserMaintenance\obj\Debug\UserMaintenance.pdb
