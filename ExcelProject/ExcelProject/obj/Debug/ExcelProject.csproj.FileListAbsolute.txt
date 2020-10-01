@@ -1,0 +1,14 @@
+E:\GitVisualStudio\ExcelProject\ExcelProject\bin\Debug\ExcelProject.exe.config
+E:\GitVisualStudio\ExcelProject\ExcelProject\bin\Debug\ExcelProject.exe
+E:\GitVisualStudio\ExcelProject\ExcelProject\bin\Debug\ExcelProject.pdb
+E:\GitVisualStudio\ExcelProject\ExcelProject\bin\Debug\EntityFramework.dll
+E:\GitVisualStudio\ExcelProject\ExcelProject\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitVisualStudio\ExcelProject\ExcelProject\bin\Debug\EntityFramework.xml
+E:\GitVisualStudio\ExcelProject\ExcelProject\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitVisualStudio\ExcelProject\ExcelProject\obj\Debug\ExcelProject.csprojAssemblyReference.cache
+E:\GitVisualStudio\ExcelProject\ExcelProject\obj\Debug\ExcelProject.Properties.Resources.resources
+E:\GitVisualStudio\ExcelProject\ExcelProject\obj\Debug\ExcelProject.csproj.GenerateResource.cache
+E:\GitVisualStudio\ExcelProject\ExcelProject\obj\Debug\ExcelProject.csproj.CoreCompileInputs.cache
+E:\GitVisualStudio\ExcelProject\ExcelProject\obj\Debug\ExcelProject.csproj.CopyComplete
+E:\GitVisualStudio\ExcelProject\ExcelProject\obj\Debug\ExcelProject.exe
+E:\GitVisualStudio\ExcelProject\ExcelProject\obj\Debug\ExcelProject.pdb
