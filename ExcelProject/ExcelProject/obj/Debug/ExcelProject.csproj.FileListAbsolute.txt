@@ -12,3 +12,4 @@ E:\GitVisualStudio\ExcelProject\ExcelProject\obj\Debug\ExcelProject.csproj.CoreC
 E:\GitVisualStudio\ExcelProject\ExcelProject\obj\Debug\ExcelProject.csproj.CopyComplete
 E:\GitVisualStudio\ExcelProject\ExcelProject\obj\Debug\ExcelProject.exe
 E:\GitVisualStudio\ExcelProject\ExcelProject\obj\Debug\ExcelProject.pdb
+E:\GitVisualStudio\ExcelProject\ExcelProject\obj\Debug\ExcelProject.csproj.ResolveComReference.cache
