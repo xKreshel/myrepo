@@ -18,7 +18,9 @@ namespace ExcelProject
         List<Flat> Flats;
         Excel.Application xlApp; 
         Excel.Workbook xlWB; 
-        Excel.Worksheet xlSheet; 
+        Excel.Worksheet xlSheet;
+        
+
         public Form1()
         {
             InitializeComponent();
@@ -66,6 +68,7 @@ namespace ExcelProject
 
         private void CreateTable()
         {
+            int lastRowID = xlSheet.UsedRange.Rows.Count; ;
             string[] headers = new string[] {
             "Kód",
             "Eladó",
@@ -77,6 +80,8 @@ namespace ExcelProject
             "Ár (mFt)",
             "Négyzetméter ár (Ft/m2)"
             };
+            
+
             for (int i = 0; i < headers.Length; i++)
             {
                 xlSheet.Cells[1, i + 1] = headers[i];
@@ -99,7 +104,27 @@ namespace ExcelProject
                 GetCell(2, 1),
                 GetCell(1 + values.GetLength(0), values.GetLength(1))).Value2 = values;
 
+                Excel.Range firstColumn = xlSheet.get_Range(GetCell(counter, 1), GetCell(counter, 1));
+                firstColumn.Font.Bold = true;
+                firstColumn.Interior.Color = Color.LightYellow;
+
+                lastRowID = xlSheet.UsedRange.Rows.Count;
+                Excel.Range lastColumn = xlSheet.get_Range(GetCell(counter, headers.Length), GetCell(lastRowID, headers.Length));
+                lastColumn.Interior.Color = Color.LightGreen;
             }
+
+            Excel.Range headerRange = xlSheet.get_Range(GetCell(1, 1), GetCell(1, headers.Length));
+            headerRange.Font.Bold = true;
+            headerRange.VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
+            headerRange.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            headerRange.EntireColumn.AutoFit();
+            headerRange.RowHeight = 40;
+            headerRange.Interior.Color = Color.LightBlue;
+            headerRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
+
+            
+            Excel.Range wholeTable = xlSheet.get_Range(GetCell(1, 1), GetCell(lastRowID, headers.Length));
+            wholeTable.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
         }
 
         private string GetCell(int x, int y)
@@ -118,5 +143,6 @@ namespace ExcelProject
 
             return ExcelCoordinate;
         }
+
     }
 }
