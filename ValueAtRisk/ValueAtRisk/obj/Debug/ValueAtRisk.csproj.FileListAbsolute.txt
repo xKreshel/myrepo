@@ -1,0 +1,15 @@
+E:\GitVisualStudio\ValueAtRisk\ValueAtRisk\bin\Debug\ValueAtRisk.exe.config
+E:\GitVisualStudio\ValueAtRisk\ValueAtRisk\bin\Debug\ValueAtRisk.exe
+E:\GitVisualStudio\ValueAtRisk\ValueAtRisk\bin\Debug\ValueAtRisk.pdb
+E:\GitVisualStudio\ValueAtRisk\ValueAtRisk\bin\Debug\EntityFramework.dll
+E:\GitVisualStudio\ValueAtRisk\ValueAtRisk\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitVisualStudio\ValueAtRisk\ValueAtRisk\bin\Debug\EntityFramework.xml
+E:\GitVisualStudio\ValueAtRisk\ValueAtRisk\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitVisualStudio\ValueAtRisk\ValueAtRisk\obj\Debug\ValueAtRisk.csprojAssemblyReference.cache
+E:\GitVisualStudio\ValueAtRisk\ValueAtRisk\obj\Debug\ValueAtRisk.Form1.resources
+E:\GitVisualStudio\ValueAtRisk\ValueAtRisk\obj\Debug\ValueAtRisk.Properties.Resources.resources
+E:\GitVisualStudio\ValueAtRisk\ValueAtRisk\obj\Debug\ValueAtRisk.csproj.GenerateResource.cache
+E:\GitVisualStudio\ValueAtRisk\ValueAtRisk\obj\Debug\ValueAtRisk.csproj.CoreCompileInputs.cache
+E:\GitVisualStudio\ValueAtRisk\ValueAtRisk\obj\Debug\ValueAtRisk.csproj.CopyComplete
+E:\GitVisualStudio\ValueAtRisk\ValueAtRisk\obj\Debug\ValueAtRisk.exe
+E:\GitVisualStudio\ValueAtRisk\ValueAtRisk\obj\Debug\ValueAtRisk.pdb
