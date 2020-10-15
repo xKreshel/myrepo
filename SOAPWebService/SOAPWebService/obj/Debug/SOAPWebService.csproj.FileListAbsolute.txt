@@ -1,0 +1,10 @@
+E:\GitVisualStudio\SOAPWebService\SOAPWebService\bin\Debug\SOAPWebService.exe.config
+E:\GitVisualStudio\SOAPWebService\SOAPWebService\bin\Debug\SOAPWebService.exe
+E:\GitVisualStudio\SOAPWebService\SOAPWebService\bin\Debug\SOAPWebService.pdb
+E:\GitVisualStudio\SOAPWebService\SOAPWebService\obj\Debug\SOAPWebService.csprojAssemblyReference.cache
+E:\GitVisualStudio\SOAPWebService\SOAPWebService\obj\Debug\SOAPWebService.Form1.resources
+E:\GitVisualStudio\SOAPWebService\SOAPWebService\obj\Debug\SOAPWebService.Properties.Resources.resources
+E:\GitVisualStudio\SOAPWebService\SOAPWebService\obj\Debug\SOAPWebService.csproj.GenerateResource.cache
+E:\GitVisualStudio\SOAPWebService\SOAPWebService\obj\Debug\SOAPWebService.csproj.CoreCompileInputs.cache
+E:\GitVisualStudio\SOAPWebService\SOAPWebService\obj\Debug\SOAPWebService.exe
+E:\GitVisualStudio\SOAPWebService\SOAPWebService\obj\Debug\SOAPWebService.pdb
