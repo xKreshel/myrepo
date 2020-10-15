@@ -8,9 +8,9 @@ namespace SOAPWebService.Entities
 {
     class RateData
     {
-        public DateTime Date;
-        public string Currency;
-        public decimal Value;
+        public DateTime Date { get; set; }
+        public string Currency { get; set; }
+        public Decimal Value { get; set; }
        
     }
 }
