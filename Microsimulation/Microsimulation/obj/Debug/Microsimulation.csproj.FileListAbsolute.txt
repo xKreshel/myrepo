@@ -1,0 +1,10 @@
+E:\GitVisualStudio\Microsimulation\Microsimulation\bin\Debug\Microsimulation.exe.config
+E:\GitVisualStudio\Microsimulation\Microsimulation\bin\Debug\Microsimulation.exe
+E:\GitVisualStudio\Microsimulation\Microsimulation\bin\Debug\Microsimulation.pdb
+E:\GitVisualStudio\Microsimulation\Microsimulation\obj\Debug\Microsimulation.csprojAssemblyReference.cache
+E:\GitVisualStudio\Microsimulation\Microsimulation\obj\Debug\Microsimulation.Properties.Resources.resources
+E:\GitVisualStudio\Microsimulation\Microsimulation\obj\Debug\Microsimulation.csproj.GenerateResource.cache
+E:\GitVisualStudio\Microsimulation\Microsimulation\obj\Debug\Microsimulation.csproj.CoreCompileInputs.cache
+E:\GitVisualStudio\Microsimulation\Microsimulation\obj\Debug\Microsimulation.exe
+E:\GitVisualStudio\Microsimulation\Microsimulation\obj\Debug\Microsimulation.pdb
+E:\GitVisualStudio\Microsimulation\Microsimulation\obj\Debug\Microsimulation.Form1.resources
