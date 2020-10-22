@@ -17,19 +17,49 @@ namespace Microsimulation
         List<Person> Population = new List<Person>();
         List<BirthProbability> BirthProbabilities = new List<BirthProbability>();
         List<DeathProbability> DeathProbabilities = new List<DeathProbability>();
+        List<int> nbrOfMales = new List<int>();
+        List<Int32> nbrOfFemales = new List<int>();
         Random rng = new Random(1234);
+        decimal endYear;
+        
         public Form1()
         {
             InitializeComponent();
-            Population = GetPopulation(@"E:\7. gyak\nép.csv");
+            textBox1.Text = @"E:\7. gyak\nép.csv";
+            
+            //Population = GetPopulation(@"E:\7. gyak\nép.csv");
             BirthProbabilities = GetBirthProbabilities(@"E:\7. gyak\születés.csv");
             DeathProbabilities = GetDeathProbabilities(@"E:\7. gyak\halál.csv");
 
-            for (int year = 2005; year <= 2024; year++)
+            numericUpDown1.Maximum = 2100;
+            numericUpDown1.Minimum = 2000;
+            numericUpDown1.Value = 2016;
+            
+        }
+
+        private void DisplayResults()
+        {
+            endYear = numericUpDown1.Value;
+            for (int i = 0; i < nbrOfMales.Count; i++)
+            {
+                
+                    richTextBox1.Text += "Szimulációs év: " + (i + 2005) + 
+                                        "\n Fiúk: " + nbrOfMales.ElementAt(i)  + 
+                                        "\n Lányok: " + nbrOfFemales.ElementAt(i) + "\n";
+                
+            }
+            
+        }
+
+        private void Simulation()
+        {
+            endYear = numericUpDown1.Value;
+            for (int year = 2005; year <= endYear; year++)
             {
                 for (int i = 0; i < Population.Count; i++)
                 {
                     SimStep(year, Population.ElementAt(i));
+                    
                 }
 
                 int nbrOfMales = (from x in Population
@@ -40,7 +70,11 @@ namespace Microsimulation
                                     select x).Count();
                 Console.WriteLine(
                     string.Format("Év:{0} Fiúk:{1} Lányok:{2}", year, nbrOfMales, nbrOfFemales));
+                this.nbrOfMales.Add(nbrOfMales);
+                this.nbrOfFemales.Add(nbrOfFemales);
+                
             }
+            DisplayResults();
         }
 
         public List<Person> GetPopulation(string csvpath)
@@ -106,29 +140,21 @@ namespace Microsimulation
 
         private void SimStep(int year, Person person)
         {
-            //Ha halott akkor kihagyjuk, ugrunk a ciklus következő lépésére
             if (!person.IsAlive) return;
 
-            // Letároljuk az életkort, hogy ne kelljen mindenhol újraszámolni
             byte age = (byte)(year - person.BirthYear);
 
-            // Halál kezelése
-            // Halálozási valószínűség kikeresése
             double pDeath = (from x in DeathProbabilities
                              where x.Gender == person.Gender && x.Age == age
                              select x.Probability).FirstOrDefault();
-            // Meghal a személy?
             if (rng.NextDouble() <= pDeath)
                 person.IsAlive = false;
 
-            //Születés kezelése - csak az élő nők szülnek
             if (person.IsAlive && person.Gender == Gender.Female)
             {
-                //Szülési valószínűség kikeresése
-                double pBirth = (from x in BirthProbabilities
+               double pBirth = (from x in BirthProbabilities
                                  where x.Age == age
                                  select x.Probability).FirstOrDefault();
-                //Születik gyermek?
                 if (rng.NextDouble() <= pBirth)
                 {
                     Person újszülött = new Person();
@@ -138,6 +164,36 @@ namespace Microsimulation
                     Population.Add(újszülött);
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Population = GetPopulation(textBox1.Text);
+            richTextBox1.Text = "";
+            nbrOfMales.Clear();
+            nbrOfFemales.Clear();
+            Simulation();
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog1 = new OpenFileDialog())
+            {
+                openFileDialog1.DefaultExt = "csv";
+                openFileDialog1.Title = "Browse csv Files";
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    textBox1.Text =  openFileDialog1.FileName;
+                }
+            }
+                
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
