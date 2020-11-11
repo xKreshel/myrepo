@@ -36,11 +36,13 @@ namespace Factory
             this.button1 = new System.Windows.Forms.Button();
             this.createTimer = new System.Windows.Forms.Timer(this.components);
             this.conveyorTimer = new System.Windows.Forms.Timer(this.components);
+            this.colorButton = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.colorButton);
             this.mainPanel.Controls.Add(this.lblNext);
             this.mainPanel.Controls.Add(this.button2);
             this.mainPanel.Controls.Add(this.button1);
@@ -91,6 +93,16 @@ namespace Factory
             this.conveyorTimer.Interval = 10;
             this.conveyorTimer.Tick += new System.EventHandler(this.conveyorTimer_Tick);
             // 
+            // colorButton
+            // 
+            this.colorButton.BackColor = System.Drawing.Color.Maroon;
+            this.colorButton.Location = new System.Drawing.Point(363, 189);
+            this.colorButton.Name = "colorButton";
+            this.colorButton.Size = new System.Drawing.Size(75, 23);
+            this.colorButton.TabIndex = 3;
+            this.colorButton.UseVisualStyleBackColor = false;
+            this.colorButton.Click += new System.EventHandler(this.btnColor_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +125,7 @@ namespace Factory
         private System.Windows.Forms.Label lblNext;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button colorButton;
     }
 }
 
