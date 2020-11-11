@@ -8,3 +8,4 @@ E:\GitVisualStudio\Factory\Factory\obj\Debug\Factory.csproj.GenerateResource.cac
 E:\GitVisualStudio\Factory\Factory\obj\Debug\Factory.csproj.CoreCompileInputs.cache
 E:\GitVisualStudio\Factory\Factory\obj\Debug\Factory.exe
 E:\GitVisualStudio\Factory\Factory\obj\Debug\Factory.pdb
+E:\GitVisualStudio\Factory\Factory\bin\Debug\Images\car.png
