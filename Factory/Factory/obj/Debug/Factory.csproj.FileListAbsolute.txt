@@ -1,0 +1,10 @@
+E:\GitVisualStudio\Factory\Factory\bin\Debug\Factory.exe.config
+E:\GitVisualStudio\Factory\Factory\bin\Debug\Factory.exe
+E:\GitVisualStudio\Factory\Factory\bin\Debug\Factory.pdb
+E:\GitVisualStudio\Factory\Factory\obj\Debug\Factory.csprojAssemblyReference.cache
+E:\GitVisualStudio\Factory\Factory\obj\Debug\Factory.Form1.resources
+E:\GitVisualStudio\Factory\Factory\obj\Debug\Factory.Properties.Resources.resources
+E:\GitVisualStudio\Factory\Factory\obj\Debug\Factory.csproj.GenerateResource.cache
+E:\GitVisualStudio\Factory\Factory\obj\Debug\Factory.csproj.CoreCompileInputs.cache
+E:\GitVisualStudio\Factory\Factory\obj\Debug\Factory.exe
+E:\GitVisualStudio\Factory\Factory\obj\Debug\Factory.pdb
