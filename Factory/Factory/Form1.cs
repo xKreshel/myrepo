@@ -91,5 +91,14 @@ namespace Factory
                 return;
             button.BackColor = colorPicker.Color;
         }
+
+        private void btnSelectPresent_Click(object sender, EventArgs e)
+        {
+            Factory = new PresentFactory()
+            {
+                PresentColor = btnRibbon.BackColor,
+                PresentColor2 = btnBox.BackColor
+            };
+        }
     }
 }

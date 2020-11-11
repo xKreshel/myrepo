@@ -37,11 +37,17 @@ namespace Factory
             this.createTimer = new System.Windows.Forms.Timer(this.components);
             this.conveyorTimer = new System.Windows.Forms.Timer(this.components);
             this.btnBallColor = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnRibbon = new System.Windows.Forms.Button();
+            this.btnBox = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.btnBox);
+            this.mainPanel.Controls.Add(this.btnRibbon);
+            this.mainPanel.Controls.Add(this.button3);
             this.mainPanel.Controls.Add(this.btnBallColor);
             this.mainPanel.Controls.Add(this.lblNext);
             this.mainPanel.Controls.Add(this.button2);
@@ -96,12 +102,42 @@ namespace Factory
             // btnBallColor
             // 
             this.btnBallColor.BackColor = System.Drawing.Color.Maroon;
-            this.btnBallColor.Location = new System.Drawing.Point(363, 189);
+            this.btnBallColor.Location = new System.Drawing.Point(199, 218);
             this.btnBallColor.Name = "btnBallColor";
             this.btnBallColor.Size = new System.Drawing.Size(75, 23);
             this.btnBallColor.TabIndex = 3;
             this.btnBallColor.UseVisualStyleBackColor = false;
             this.btnBallColor.Click += new System.EventHandler(this.btnColor_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(314, 189);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "PRESENT";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnSelectPresent_Click);
+            // 
+            // btnRibbon
+            // 
+            this.btnRibbon.BackColor = System.Drawing.Color.Gold;
+            this.btnRibbon.Location = new System.Drawing.Point(314, 218);
+            this.btnRibbon.Name = "btnRibbon";
+            this.btnRibbon.Size = new System.Drawing.Size(75, 23);
+            this.btnRibbon.TabIndex = 5;
+            this.btnRibbon.UseVisualStyleBackColor = false;
+            this.btnRibbon.Click += new System.EventHandler(this.btnColor_Click);
+            // 
+            // btnBox
+            // 
+            this.btnBox.BackColor = System.Drawing.Color.Maroon;
+            this.btnBox.Location = new System.Drawing.Point(314, 247);
+            this.btnBox.Name = "btnBox";
+            this.btnBox.Size = new System.Drawing.Size(75, 23);
+            this.btnBox.TabIndex = 6;
+            this.btnBox.UseVisualStyleBackColor = false;
+            this.btnBox.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // Form1
             // 
@@ -126,6 +162,9 @@ namespace Factory
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnBallColor;
+        private System.Windows.Forms.Button btnBox;
+        private System.Windows.Forms.Button btnRibbon;
+        private System.Windows.Forms.Button button3;
     }
 }
 
