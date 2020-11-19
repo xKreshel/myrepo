@@ -24,3 +24,4 @@ E:\GitVisualStudio\UnitTestExample\UnitTestExample\bin\Debug\normnfd.nlp
 E:\GitVisualStudio\UnitTestExample\UnitTestExample\bin\Debug\normnfkc.nlp
 E:\GitVisualStudio\UnitTestExample\UnitTestExample\bin\Debug\normnfkd.nlp
 E:\GitVisualStudio\UnitTestExample\UnitTestExample\obj\Debug\UnitTestExample.csproj.CopyComplete
+E:\GitVisualStudio\UnitTestExample\UnitTestExample\obj\Debug\UnitTestExample.csprojAssemblyReference.cache
